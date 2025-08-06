@@ -90,12 +90,14 @@ class openCHA(BaseModel):
         message,
         openai_api_key_input,
         serp_api_key_input,
+        gemini_api_key_input,
         chat_history,
         check_box,
         tasks_list,
     ):
         os.environ["OPENAI_API_KEY"] = openai_api_key_input
         os.environ["SEPR_API_KEY"] = serp_api_key_input
+        os.environ["GEMINI_API_KEY"] = gemini_api_key_input
         response = self._run(
             query=message,
             chat_history=chat_history,

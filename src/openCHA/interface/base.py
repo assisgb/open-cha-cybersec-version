@@ -74,13 +74,16 @@ class Interface(BaseModel):
 
         """
 
-        def submit_api_keys(openai_api_key, serp_api_key):
+        def submit_api_keys(openai_api_key, serp_api_key, gemini_api_key):
             # Set environment variables
             os.environ["OPENAI_API_KEY"] = openai_api_key
             os.environ["SEPR_API_KEY"] = serp_api_key
+            os.environ["GEMINI_API_KEY"] = gemini_api_key
 
             print("keys submitted")
             print(openai_api_key)
+            print(serp_api_key)
+            print(gemini_api_key)
 
         with self.gr.Blocks() as demo:
             chatbot = self.gr.Chatbot(bubble_full_width=False)
@@ -120,6 +123,10 @@ class Interface(BaseModel):
                     label="Serp API Key",
                     info="Enter your Serp API key here.",
                 )
+                gemini_api_key_input = self.gr.Textbox(
+                    label="Gemini API Key",
+                    info="Enter your Gemini API key here.",
+                )
 
             clear = self.gr.ClearButton([msg, chatbot])
             clear.click(reset)
@@ -130,6 +137,7 @@ class Interface(BaseModel):
                     msg,
                     openai_api_key_input,
                     serp_api_key_input,
+                    gemini_api_key_input,
                     chatbot,
                     check_box,
                     tasks,

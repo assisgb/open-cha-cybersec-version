@@ -52,6 +52,7 @@ in their website and get the api_key. Then you should add openAI api_key as envi
 
 ```bash
 export OPENAI_API_KEY="your api_key"
+export GEMINI_API_KEY="api_key"
 ```
 
 The same goes for using tasks like SerpAPI:

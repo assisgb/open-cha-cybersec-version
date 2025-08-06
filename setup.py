@@ -67,6 +67,7 @@ setup(
             "lxml",
             "tiktoken",
             "openai~=1.2",
+            "google-generativeai",
             "googlesearch-python",
             "uvicorn",
             "h11",

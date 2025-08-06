@@ -223,7 +223,7 @@ Question: {input}
 
         previous_actions_prompt = ""
         if len(previous_actions) > 0 and self.use_previous_action:
-            previous_actions_prompt = f"Previoius Actions:\n{self.generate_scratch_pad(previous_actions, **kwargs)}"
+            previous_actions_prompt = f"Previous Actions:\n{self.generate_scratch_pad(previous_actions, **kwargs)}"
 
         prompt = (
             self._planner_prompt[0]
@@ -242,7 +242,7 @@ Question: {input}
         response = self._planner_model.generate(
             query=prompt, **kwargs
         )
-        print("respp\n\n", response)
+        print("resp\n\n", response)
         prompt = (
             self._planner_prompt[1]
             .replace(

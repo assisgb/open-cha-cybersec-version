@@ -22,5 +22,5 @@ __all__ = [
     "SerpAPI",
     "TaskType",
     "TestFile",
-    "TASK_TO_CLASS",
+    "TASK_TO_CLASS"
 ]

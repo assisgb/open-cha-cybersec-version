@@ -47,7 +47,7 @@ class Orchestrator(BaseModel):
     promptist: Any = None
     response_generator: BaseResponseGenerator = None
     available_tasks: Dict[str, BaseTask] = {}
-    max_retries: int = 5
+    max_retries: int = 1
     max_task_execute_retries: int = 3
     max_planner_execute_retries: int = 16
     max_final_answer_execute_retries: int = 3
@@ -455,7 +455,7 @@ class Orchestrator(BaseModel):
             try:
                 self.print_log(
                     "planner",
-                    f"Continueing Planning... Try number {i}\n\n",
+                    f"Continuing Planning... Try number {i}\n\n",
                 )
                 actions = self.plan(
                     query=prompt,

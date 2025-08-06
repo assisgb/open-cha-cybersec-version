@@ -17,6 +17,7 @@ from openCHA.tasks.affect import PPGGet
 from openCHA.tasks.affect import SleepAnalysis
 from openCHA.tasks.affect import SleepGet
 from openCHA.tasks.affect import StressAnalysis
+from openCHA.tasks.custom import AwakeningsDetection, SleepDisordersIntervals, EDAFeatureExtraction, SleepQualityFromEDA
 from openCHA.tasks.nutritionix import (
     CalculateFoodRiskFactor,
 )
@@ -40,4 +41,8 @@ TASK_TO_CLASS: Dict[TaskType, Type[BaseTask]] = {
     TaskType.QUERY_NUTRITIONIX: QueryNutritionix,
     TaskType.CALCULATE_FOOD_RISK_FACTOR: CalculateFoodRiskFactor,
     TaskType.GOOGLE_SEARCH: GoogleSearch,
+    TaskType.AWAKENINGS_DETECTION: AwakeningsDetection,
+    TaskType.SLEEP_DISORDERS_INTERVALS: SleepDisordersIntervals,
+    TaskType.EDA_FEATURE_EXTRACTION: EDAFeatureExtraction,
+    TaskType.SLEEP_QUALITY_FROM_EDA: SleepQualityFromEDA,
 }

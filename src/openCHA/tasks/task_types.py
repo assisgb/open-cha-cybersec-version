@@ -1,7 +1,10 @@
 from enum import Enum
 
-
 class TaskType(str, Enum):
+    AWAKENINGS_DETECTION = "awakenings_detection"
+    SLEEP_DISORDERS_INTERVALS = "sleep_disorders_intervals"
+    EDA_FEATURE_EXTRACTION = "eda_feature_extraction"
+    SLEEP_QUALITY_FROM_EDA = "sleep_quality_from_eda"
     SERPAPI = "serpapi"
     EXTRACT_TEXT = "extract_text"
     AFFECT_SLEEP_GET = "affect_sleep_get"
