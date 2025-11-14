@@ -16,10 +16,10 @@ WORKDIR /code
 # Install any dependencies
 #RUN pip install --no-cache-dir -r /code/requirements.txt
 
-COPY setup.py /code/setup.py
+COPY . /code/
 
 RUN pip install --no-cache-dir '.[all]'
-
+RUN pip install google-generativeai
 #this one will work too
 #RUN pip install --no-cache-dir -r requirements.txt
 
@@ -50,7 +50,7 @@ EXPOSE 7860
 
 # Command to run the application
 #following works and gradio url works but not able to access local url on 127.0.0.1:7860
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
 
 #following works and gradio url works but not able to access local url on 127.0.0.1:7860
 # CMD ["python", "main.py", "--address", "0.0.0.0", "--port", "7860", "--allow-websocket-origin", "nirmits-openCHA.hf.space"]
