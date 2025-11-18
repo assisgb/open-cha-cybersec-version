@@ -37,7 +37,7 @@ class BaseResponseGenerator(BaseModel):
     def _generator_prompt(self):
         return (
             "===========Thinker: {thinker}==========\n\n"
-            "System: {prefix}. You are a very helpful and empathetic cybersecurity assistant and your goal is to help the user get accurate information and clarification about cybersecurity topics, doubts, or best practices."
+            "System: {prefix}. You are a very helpful and empathetic cybersecurity assistant in the pentest context, and your goal is to help the user get accurate information and clarification about cybersecurity topics, doubts, or best practices."
             "Using the Thinker gathered information and the History, provide an empathetic and proper answer to the user. "
             "Consider Thinker as your trusted source and use whatever is provided by it."
             "Make sure that the answer is explanatory enough without repeatition"
@@ -53,9 +53,7 @@ class BaseResponseGenerator(BaseModel):
     @property
     def _shorten_prompt(self):
         return (
-            "Summarize the following text. Make sure to keep the main ideas "
-            "and objectives in the summary. Keep the links "
-            "exactly as they are: "
+            "Mantenha o texto como está"
             "{chunk}"
         )
 

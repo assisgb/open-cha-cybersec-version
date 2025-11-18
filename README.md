@@ -19,7 +19,8 @@ source /path/to/new/virtual/environment/bin/activate
 Now, install the CHA package.
 ```bash
 pip install openCHA
-playwright install
+pip install playwright
+pip install google-generativeai
 ```
 
 Manual Installation
