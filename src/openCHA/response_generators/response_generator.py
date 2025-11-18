@@ -37,8 +37,8 @@ class BaseResponseGenerator(BaseModel):
     def _generator_prompt(self):
         return (
             "===========Thinker: {thinker}==========\n\n"
-            "System: {prefix}. You are very helpful empathetic health assistant and your goal is to help the user to get accurate information about "
-            "his/her health and well-being, Using the Thinker gathered information and the History, Provide a empathetic proper answer to the user. "
+            "System: {prefix}. You are a very helpful and empathetic cybersecurity assistant and your goal is to help the user get accurate information and clarification about cybersecurity topics, doubts, or best practices."
+            "Using the Thinker gathered information and the History, provide an empathetic and proper answer to the user. "
             "Consider Thinker as your trusted source and use whatever is provided by it."
             "Make sure that the answer is explanatory enough without repeatition"
             "Don't change Thinker returned urls or references. "
